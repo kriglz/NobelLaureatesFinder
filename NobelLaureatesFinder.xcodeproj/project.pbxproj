@@ -61,6 +61,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		896733B12410749B00B7ED21 /* Search View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				899FD350240ECB6C00250968 /* ViewController.swift */,
+				896733A5241063EA00B7ED21 /* ListViewController.swift */,
+				896733A7241069EF00B7ED21 /* ListViewController+Cell.swift */,
+				899FD362240ED69B00250968 /* DateButton.swift */,
+				899FD364240ED88800250968 /* DatePickerView.swift */,
+				899FD366240F06A600250968 /* CoordinatesView.swift */,
+				899FD36A240F292300250968 /* CoordinatesView+Coordinate.swift */,
+			);
+			path = "Search View Controller";
+			sourceTree = "<group>";
+		};
+		896733B2241074B100B7ED21 /* Route Planner */ = {
+			isa = PBXGroup;
+			children = (
+				896733AB24106AD900B7ED21 /* RoutePlanner.swift */,
+				896733AF2410745E00B7ED21 /* Destination.swift */,
+				896733A924106A7E00B7ED21 /* nobel-prize-laureates.json */,
+				896733AD24106C7400B7ED21 /* NobelPrizeLaureate.swift */,
+			);
+			path = "Route Planner";
+			sourceTree = "<group>";
+		};
+		896733B3241074B800B7ED21 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				899FD36C240F31E400250968 /* Constants.swift */,
+				899FD368240F28F900250968 /* UIView+Extension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		899FD340240ECB6C00250968 = {
 			isa = PBXGroup;
 			children = (
@@ -80,19 +114,9 @@
 		899FD34B240ECB6C00250968 /* NobelLaureatesFinder */ = {
 			isa = PBXGroup;
 			children = (
-				899FD350240ECB6C00250968 /* ViewController.swift */,
-				896733A5241063EA00B7ED21 /* ListViewController.swift */,
-				896733A7241069EF00B7ED21 /* ListViewController+Cell.swift */,
-				899FD362240ED69B00250968 /* DateButton.swift */,
-				899FD364240ED88800250968 /* DatePickerView.swift */,
-				899FD366240F06A600250968 /* CoordinatesView.swift */,
-				899FD36A240F292300250968 /* CoordinatesView+Coordinate.swift */,
-				896733AB24106AD900B7ED21 /* RoutePlanner.swift */,
-				896733AF2410745E00B7ED21 /* Destination.swift */,
-				896733A924106A7E00B7ED21 /* nobel-prize-laureates.json */,
-				896733AD24106C7400B7ED21 /* NobelPrizeLaureate.swift */,
-				899FD36C240F31E400250968 /* Constants.swift */,
-				899FD368240F28F900250968 /* UIView+Extension.swift */,
+				896733B12410749B00B7ED21 /* Search View Controller */,
+				896733B2241074B100B7ED21 /* Route Planner */,
+				896733B3241074B800B7ED21 /* Helpers */,
 				899FD34C240ECB6C00250968 /* AppDelegate.swift */,
 				899FD34E240ECB6C00250968 /* SceneDelegate.swift */,
 				899FD352240ECB6C00250968 /* Main.storyboard */,
