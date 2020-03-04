@@ -15,7 +15,7 @@
 		896733B02410745E00B7ED21 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896733AF2410745E00B7ED21 /* Destination.swift */; };
 		899FD34D240ECB6C00250968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD34C240ECB6C00250968 /* AppDelegate.swift */; };
 		899FD34F240ECB6C00250968 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD34E240ECB6C00250968 /* SceneDelegate.swift */; };
-		899FD351240ECB6C00250968 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD350240ECB6C00250968 /* ViewController.swift */; };
+		899FD351240ECB6C00250968 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD350240ECB6C00250968 /* SearchViewController.swift */; };
 		899FD354240ECB6C00250968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899FD352240ECB6C00250968 /* Main.storyboard */; };
 		899FD356240ECB7100250968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 899FD355240ECB7100250968 /* Assets.xcassets */; };
 		899FD359240ECB7100250968 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899FD357240ECB7100250968 /* LaunchScreen.storyboard */; };
@@ -37,7 +37,7 @@
 		899FD349240ECB6C00250968 /* NobelLaureatesFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NobelLaureatesFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		899FD34C240ECB6C00250968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		899FD34E240ECB6C00250968 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		899FD350240ECB6C00250968 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		899FD350240ECB6C00250968 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		899FD353240ECB6C00250968 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		899FD355240ECB7100250968 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		899FD358240ECB7100250968 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 		896733B12410749B00B7ED21 /* Search View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				899FD350240ECB6C00250968 /* ViewController.swift */,
+				899FD350240ECB6C00250968 /* SearchViewController.swift */,
 				896733A5241063EA00B7ED21 /* ListViewController.swift */,
 				896733A7241069EF00B7ED21 /* ListViewController+Cell.swift */,
 				899FD362240ED69B00250968 /* DateButton.swift */,
@@ -206,7 +206,7 @@
 				899FD36D240F31E400250968 /* Constants.swift in Sources */,
 				896733A8241069EF00B7ED21 /* ListViewController+Cell.swift in Sources */,
 				896733B02410745E00B7ED21 /* Destination.swift in Sources */,
-				899FD351240ECB6C00250968 /* ViewController.swift in Sources */,
+				899FD351240ECB6C00250968 /* SearchViewController.swift in Sources */,
 				899FD34D240ECB6C00250968 /* AppDelegate.swift in Sources */,
 				896733AC24106AD900B7ED21 /* RoutePlanner.swift in Sources */,
 				899FD34F240ECB6C00250968 /* SceneDelegate.swift in Sources */,

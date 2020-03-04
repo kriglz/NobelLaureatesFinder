@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController {
+class SearchViewController: UIViewController {
 
     private let headerView = UIView()
     private let dateTitle = UILabel()
