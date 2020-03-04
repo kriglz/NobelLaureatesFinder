@@ -40,7 +40,7 @@ extension CoordinatesView {
             super.init(frame: frame)
                         
             borderView.layer.cornerRadius = 10
-            borderView.layer.borderColor = UIColor.gray.cgColor
+            borderView.layer.borderColor = UIColor.systemGray.cgColor
             borderView.layer.borderWidth = 1
             
             textField.placeholder = "Decimal Degrees"

@@ -15,14 +15,12 @@ class DateButton: UIControl {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-//        backgroundColor = .white
         layer.cornerRadius = 10
-        layer.borderColor = UIColor.gray.cgColor
+        layer.borderColor = UIColor.systemGray.cgColor
         layer.borderWidth = 1
         
         titleLabel.text = "Select a year"
         titleLabel.textAlignment = .center
-//        titleLabel.textColor = .lightGray
         
         addSubview(titleLabel)
         
