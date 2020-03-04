@@ -17,6 +17,8 @@
 		899FD363240ED69B00250968 /* DateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD362240ED69B00250968 /* DateButton.swift */; };
 		899FD365240ED88800250968 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD364240ED88800250968 /* DatePickerView.swift */; };
 		899FD367240F06A600250968 /* CoordinatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD366240F06A600250968 /* CoordinatesView.swift */; };
+		899FD369240F28F900250968 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD368240F28F900250968 /* UIView+Extension.swift */; };
+		899FD36B240F292300250968 /* CoordinatesView+Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD36A240F292300250968 /* CoordinatesView+Coordinate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		899FD362240ED69B00250968 /* DateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateButton.swift; sourceTree = "<group>"; };
 		899FD364240ED88800250968 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		899FD366240F06A600250968 /* CoordinatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesView.swift; sourceTree = "<group>"; };
+		899FD368240F28F900250968 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		899FD36A240F292300250968 /* CoordinatesView+Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoordinatesView+Coordinate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				899FD362240ED69B00250968 /* DateButton.swift */,
 				899FD364240ED88800250968 /* DatePickerView.swift */,
 				899FD366240F06A600250968 /* CoordinatesView.swift */,
+				899FD36A240F292300250968 /* CoordinatesView+Coordinate.swift */,
+				899FD368240F28F900250968 /* UIView+Extension.swift */,
 				899FD34C240ECB6C00250968 /* AppDelegate.swift */,
 				899FD34E240ECB6C00250968 /* SceneDelegate.swift */,
 				899FD352240ECB6C00250968 /* Main.storyboard */,
@@ -150,8 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				899FD36B240F292300250968 /* CoordinatesView+Coordinate.swift in Sources */,
 				899FD365240ED88800250968 /* DatePickerView.swift in Sources */,
 				899FD367240F06A600250968 /* CoordinatesView.swift in Sources */,
+				899FD369240F28F900250968 /* UIView+Extension.swift in Sources */,
 				899FD361240ED21500250968 /* ControlsView.swift in Sources */,
 				899FD351240ECB6C00250968 /* ViewController.swift in Sources */,
 				899FD34D240ECB6C00250968 /* AppDelegate.swift in Sources */,

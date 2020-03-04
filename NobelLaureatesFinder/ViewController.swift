@@ -152,10 +152,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         let location = sender.location(in: mapView)
         let coordinates = mapView.convert(location, toCoordinateFrom: mapView)
         
-        coordinatesView.updateCoordinates(n: coordinates.latitude, e: coordinates.longitude)
+        coordinatesView.updateCoordinates(coordinates)
         targetAnnotation.coordinate = coordinates
-
-        // TODO - select point on map
-        // TODO - fill coordinate text fields
     }
 }
