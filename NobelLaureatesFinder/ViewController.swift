@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController, UIGestureRecognizerDelegate {
+class ViewController: UIViewController {
 
     private let headerView = UIView()
     private let dateTitle = UILabel()
@@ -19,6 +19,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     private let coordinateTitle = UILabel()
     private let coordinatesView = CoordinatesView()
     private let mapView = MKMapView()
+    // todo - search button
 
     private lazy var targetAnnotation: MKPointAnnotation = {
         let annotation = MKPointAnnotation()
@@ -47,8 +48,11 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         coordinatesView.onBecameFirstResponder = { [weak self] in
             self?.dismissDatePicker()
         }
+
         coordinatesView.onSearch = { [weak self] coordinates in
             self?.targetAnnotation.coordinate = coordinates
+            
+            // TODO min man span to keep region valid
             
             let span = MKCoordinateSpan(latitudeDelta: coordinates.latitude + 10, longitudeDelta: coordinates.longitude + 10)
             let region = MKCoordinateRegion(center: coordinates, span: span)
@@ -109,7 +113,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         coordinateTitle.centerYAnchor.constraint(equalTo: coordinatesView.centerYAnchor).isActive = true
                 
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapGestureHandler))
-        tapGestureRecognizer.delegate = self
+        tapGestureRecognizer.numberOfTouchesRequired = 1
         mapView.addGestureRecognizer(tapGestureRecognizer)
     }
     
