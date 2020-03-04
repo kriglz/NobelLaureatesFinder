@@ -13,7 +13,6 @@
 		899FD354240ECB6C00250968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899FD352240ECB6C00250968 /* Main.storyboard */; };
 		899FD356240ECB7100250968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 899FD355240ECB7100250968 /* Assets.xcassets */; };
 		899FD359240ECB7100250968 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899FD357240ECB7100250968 /* LaunchScreen.storyboard */; };
-		899FD361240ED21500250968 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD360240ED21500250968 /* ControlsView.swift */; };
 		899FD363240ED69B00250968 /* DateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD362240ED69B00250968 /* DateButton.swift */; };
 		899FD365240ED88800250968 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD364240ED88800250968 /* DatePickerView.swift */; };
 		899FD367240F06A600250968 /* CoordinatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD366240F06A600250968 /* CoordinatesView.swift */; };
@@ -31,7 +30,6 @@
 		899FD355240ECB7100250968 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		899FD358240ECB7100250968 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		899FD35A240ECB7100250968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		899FD360240ED21500250968 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
 		899FD362240ED69B00250968 /* DateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateButton.swift; sourceTree = "<group>"; };
 		899FD364240ED88800250968 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		899FD366240F06A600250968 /* CoordinatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesView.swift; sourceTree = "<group>"; };
@@ -71,13 +69,12 @@
 			isa = PBXGroup;
 			children = (
 				899FD350240ECB6C00250968 /* ViewController.swift */,
-				899FD360240ED21500250968 /* ControlsView.swift */,
 				899FD362240ED69B00250968 /* DateButton.swift */,
 				899FD364240ED88800250968 /* DatePickerView.swift */,
 				899FD366240F06A600250968 /* CoordinatesView.swift */,
 				899FD36A240F292300250968 /* CoordinatesView+Coordinate.swift */,
-				899FD368240F28F900250968 /* UIView+Extension.swift */,
 				899FD36C240F31E400250968 /* Constants.swift */,
+				899FD368240F28F900250968 /* UIView+Extension.swift */,
 				899FD34C240ECB6C00250968 /* AppDelegate.swift */,
 				899FD34E240ECB6C00250968 /* SceneDelegate.swift */,
 				899FD352240ECB6C00250968 /* Main.storyboard */,
@@ -163,7 +160,6 @@
 				899FD365240ED88800250968 /* DatePickerView.swift in Sources */,
 				899FD367240F06A600250968 /* CoordinatesView.swift in Sources */,
 				899FD369240F28F900250968 /* UIView+Extension.swift in Sources */,
-				899FD361240ED21500250968 /* ControlsView.swift in Sources */,
 				899FD36D240F31E400250968 /* Constants.swift in Sources */,
 				899FD351240ECB6C00250968 /* ViewController.swift in Sources */,
 				899FD34D240ECB6C00250968 /* AppDelegate.swift in Sources */,
