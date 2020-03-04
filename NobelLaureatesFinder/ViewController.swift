@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     private let coordinatesView = CoordinatesView()
     private let mapView = MKMapView()
     private let searchButton = UIButton()
-    // todo - list view button
+    private let listViewButton = UIButton()
 
     private var dataPickerHeightConstraint: NSLayoutConstraint?
 
@@ -66,11 +66,18 @@ class ViewController: UIViewController {
         
         searchButton.setTitle("Search", for: .normal)
         searchButton.setTitleColor(.white, for: .normal)
-        searchButton.backgroundColor = .systemBlue
+        searchButton.backgroundColor = .systemOrange
         searchButton.layer.shadowOffset = CGSize(width: 0, height: 1)
         searchButton.layer.shadowOpacity = 0.1
         searchButton.layer.cornerRadius = 25
         searchButton.addTarget(self, action: #selector(searchAction(_:)), for: .touchUpInside)
+        
+        listViewButton.setImage(UIImage(named: "listViewIcon"), for: .normal)
+        listViewButton.addTarget(self, action: #selector(openListView(_:)), for: .touchUpInside)
+        listViewButton.backgroundColor = .tertiarySystemGroupedBackground
+        listViewButton.layer.cornerRadius = 20
+        listViewButton.layer.shadowOffset = CGSize(width: 0, height: 1)
+        listViewButton.layer.shadowOpacity = 0.3
         
         view.addSubview(mapView)
         view.addSubview(headerView)
@@ -80,6 +87,7 @@ class ViewController: UIViewController {
         view.addSubview(coordinateTitle)
         view.addSubview(coordinatesView)
         view.addSubview(searchButton)
+        view.addSubview(listViewButton)
         
         headerView.translatesAutoresizingMaskIntoConstraints = false
         dateTitle.translatesAutoresizingMaskIntoConstraints = false
@@ -89,6 +97,7 @@ class ViewController: UIViewController {
         coordinatesView.translatesAutoresizingMaskIntoConstraints = false
         mapView.translatesAutoresizingMaskIntoConstraints = false
         searchButton.translatesAutoresizingMaskIntoConstraints = false
+        listViewButton.translatesAutoresizingMaskIntoConstraints = false
 
         mapView.topAnchor.constraint(equalTo: headerView.bottomAnchor).isActive = true
         mapView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
@@ -129,6 +138,11 @@ class ViewController: UIViewController {
         searchButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true        
         searchButton.widthAnchor.constraint(equalToConstant: 120).isActive = true
         searchButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        listViewButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        listViewButton.centerYAnchor.constraint(equalTo: searchButton.centerYAnchor).isActive = true
+        listViewButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        listViewButton.widthAnchor.constraint(equalTo: listViewButton.heightAnchor).isActive = true
 
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapGestureHandler))
         tapGestureRecognizer.numberOfTouchesRequired = 1
@@ -144,6 +158,10 @@ class ViewController: UIViewController {
         }
         
         // Perform search
+    }
+    
+    @objc private func openListView(_ sender: UIButton) {
+        
     }
     
     @objc private func showDatePicker(_ sender: UIControl) {
