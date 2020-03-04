@@ -29,6 +29,7 @@ class DateButton: UIControl {
         layer.borderWidth = 1
         
         titleLabel.text = DateButton.placeholderMessage
+        titleLabel.textColor = .placeholderText
         titleLabel.textAlignment = .center
         
         addSubview(titleLabel)
@@ -46,6 +47,7 @@ class DateButton: UIControl {
     }
     
     func updateTitle(_ title: String) {
+        titleLabel.textColor = .label
         titleLabel.text = title
     }
 }

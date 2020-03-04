@@ -22,6 +22,8 @@ class ViewController: UIViewController {
     private let searchButton = UIButton()
     // todo - list view button
 
+    private var dataPickerHeightConstraint: NSLayoutConstraint?
+
     private lazy var targetAnnotation: MKPointAnnotation = {
         let annotation = MKPointAnnotation()
         annotation.title = "Your location"
@@ -29,17 +31,17 @@ class ViewController: UIViewController {
         return annotation
     }()
 
-    private var dataPickerHeightConstraint: NSLayoutConstraint?
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
         dateTitle.text = "Year"
+        dateTitle.font = UIFont.systemFont(ofSize: 16, weight: .bold)
 
         coordinateTitle.text = "Coordinates"
+        coordinateTitle.font = UIFont.systemFont(ofSize: 16, weight: .bold)
 
         headerView.backgroundColor = .tertiarySystemBackground
-        headerView.layer.shadowOpacity = 0.2
+        headerView.layer.shadowOpacity = 0.3
         headerView.layer.shadowOffset = CGSize(width: 0, height: 2)
 
         dateButton.addTarget(self, action: #selector(showDatePicker(_:)), for: .touchUpInside)
