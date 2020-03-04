@@ -10,7 +10,16 @@ import UIKit
 
 class DateButton: UIControl {
     
+    var date: String? {
+        if titleLabel.text == DateButton.placeholderMessage {
+            return nil
+        }
+        
+        return titleLabel.text
+    }
+    
     private let titleLabel = UILabel()
+    static private let placeholderMessage = "Select a year"
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -19,7 +28,7 @@ class DateButton: UIControl {
         layer.borderColor = UIColor.systemGray.cgColor
         layer.borderWidth = 1
         
-        titleLabel.text = "Select a year"
+        titleLabel.text = DateButton.placeholderMessage
         titleLabel.textAlignment = .center
         
         addSubview(titleLabel)
@@ -38,6 +47,5 @@ class DateButton: UIControl {
     
     func updateTitle(_ title: String) {
         titleLabel.text = title
-//        titleLabel.textColor = .darkGray
     }
 }

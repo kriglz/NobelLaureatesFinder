@@ -65,10 +65,9 @@ class ViewController: UIViewController {
         searchButton.setTitle("Search", for: .normal)
         searchButton.setTitleColor(.white, for: .normal)
         searchButton.backgroundColor = .systemBlue
-        searchButton.contentEdgeInsets = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
-        searchButton.layer.cornerRadius = 10
-        searchButton.layer.shadowOpacity = 0.1
         searchButton.layer.shadowOffset = CGSize(width: 0, height: 1)
+        searchButton.layer.shadowOpacity = 0.1
+        searchButton.layer.cornerRadius = 25
         searchButton.addTarget(self, action: #selector(searchAction(_:)), for: .touchUpInside)
         
         view.addSubview(mapView)
@@ -123,10 +122,12 @@ class ViewController: UIViewController {
         coordinateTitle.leadingAnchor.constraint(equalTo: dateTitle.leadingAnchor).isActive = true
         coordinateTitle.widthAnchor.constraint(equalTo: dateTitle.widthAnchor).isActive = true
         coordinateTitle.centerYAnchor.constraint(equalTo: coordinatesView.centerYAnchor).isActive = true
-                
-        searchButton.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 15).isActive = true
-        searchButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
-        
+
+        searchButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
+        searchButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true        
+        searchButton.widthAnchor.constraint(equalToConstant: 120).isActive = true
+        searchButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapGestureHandler))
         tapGestureRecognizer.numberOfTouchesRequired = 1
         mapView.addGestureRecognizer(tapGestureRecognizer)
@@ -135,6 +136,11 @@ class ViewController: UIViewController {
     // MARK: - Actions
 
     @objc private func searchAction(_ sender: Any?) {
+        guard let date = dateButton.date,
+            let coordinates = coordinatesView.coordinates else {
+                return UINotificationFeedbackGenerator().notificationOccurred(.warning)
+        }
+        
         // Perform search
     }
     

@@ -21,7 +21,6 @@ class DatePickerView: UIView, UIPickerViewDataSource, UIPickerViewDelegate {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-//        backgroundColor = .white
         clipsToBounds = true
 
         datePicker.dataSource = self
