@@ -51,10 +51,8 @@ class ViewController: UIViewController {
 
         coordinatesView.onSearch = { [weak self] coordinates in
             self?.targetAnnotation.coordinate = coordinates
-            
-            // TODO min man span to keep region valid
-            
-            let span = MKCoordinateSpan(latitudeDelta: coordinates.latitude + 10, longitudeDelta: coordinates.longitude + 10)
+
+            let span = MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10)
             let region = MKCoordinateRegion(center: coordinates, span: span)
             self?.mapView.setRegion(region, animated: true)
             
