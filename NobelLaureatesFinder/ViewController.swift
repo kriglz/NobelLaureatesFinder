@@ -19,7 +19,8 @@ class ViewController: UIViewController {
     private let coordinateTitle = UILabel()
     private let coordinatesView = CoordinatesView()
     private let mapView = MKMapView()
-    // todo - search button
+    private let searchButton = UIButton()
+    // todo - list view button
 
     private lazy var targetAnnotation: MKPointAnnotation = {
         let annotation = MKPointAnnotation()
@@ -36,9 +37,11 @@ class ViewController: UIViewController {
         dateTitle.text = "Year"
 
         coordinateTitle.text = "Coordinates"
-                
-        headerView.layer.shadowOpacity = 0.5
-        
+
+        headerView.backgroundColor = .tertiarySystemBackground
+        headerView.layer.shadowOpacity = 0.2
+        headerView.layer.shadowOffset = CGSize(width: 0, height: 2)
+
         dateButton.addTarget(self, action: #selector(showDatePicker(_:)), for: .touchUpInside)
         
         datePickerView.onDateSelection = { [weak self] date in
@@ -56,8 +59,17 @@ class ViewController: UIViewController {
             let region = MKCoordinateRegion(center: coordinates, span: span)
             self?.mapView.setRegion(region, animated: true)
             
-            // TODO - perform search
+            self?.searchAction(nil)
         }
+        
+        searchButton.setTitle("Search", for: .normal)
+        searchButton.setTitleColor(.white, for: .normal)
+        searchButton.backgroundColor = .systemBlue
+        searchButton.contentEdgeInsets = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
+        searchButton.layer.cornerRadius = 10
+        searchButton.layer.shadowOpacity = 0.1
+        searchButton.layer.shadowOffset = CGSize(width: 0, height: 1)
+        searchButton.addTarget(self, action: #selector(searchAction(_:)), for: .touchUpInside)
         
         view.addSubview(mapView)
         view.addSubview(headerView)
@@ -66,6 +78,7 @@ class ViewController: UIViewController {
         view.addSubview(datePickerView)
         view.addSubview(coordinateTitle)
         view.addSubview(coordinatesView)
+        view.addSubview(searchButton)
         
         headerView.translatesAutoresizingMaskIntoConstraints = false
         dateTitle.translatesAutoresizingMaskIntoConstraints = false
@@ -74,6 +87,7 @@ class ViewController: UIViewController {
         coordinateTitle.translatesAutoresizingMaskIntoConstraints = false
         coordinatesView.translatesAutoresizingMaskIntoConstraints = false
         mapView.translatesAutoresizingMaskIntoConstraints = false
+        searchButton.translatesAutoresizingMaskIntoConstraints = false
 
         mapView.topAnchor.constraint(equalTo: headerView.bottomAnchor).isActive = true
         mapView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
@@ -110,6 +124,9 @@ class ViewController: UIViewController {
         coordinateTitle.widthAnchor.constraint(equalTo: dateTitle.widthAnchor).isActive = true
         coordinateTitle.centerYAnchor.constraint(equalTo: coordinatesView.centerYAnchor).isActive = true
                 
+        searchButton.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 15).isActive = true
+        searchButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapGestureHandler))
         tapGestureRecognizer.numberOfTouchesRequired = 1
         mapView.addGestureRecognizer(tapGestureRecognizer)
@@ -117,6 +134,10 @@ class ViewController: UIViewController {
     
     // MARK: - Actions
 
+    @objc private func searchAction(_ sender: Any?) {
+        // Perform search
+    }
+    
     @objc private func showDatePicker(_ sender: UIControl) {
         coordinatesView.endEditing()
         
