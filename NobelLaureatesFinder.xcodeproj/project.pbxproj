@@ -19,6 +19,7 @@
 		899FD367240F06A600250968 /* CoordinatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD366240F06A600250968 /* CoordinatesView.swift */; };
 		899FD369240F28F900250968 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD368240F28F900250968 /* UIView+Extension.swift */; };
 		899FD36B240F292300250968 /* CoordinatesView+Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD36A240F292300250968 /* CoordinatesView+Coordinate.swift */; };
+		899FD36D240F31E400250968 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD36C240F31E400250968 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		899FD366240F06A600250968 /* CoordinatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesView.swift; sourceTree = "<group>"; };
 		899FD368240F28F900250968 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		899FD36A240F292300250968 /* CoordinatesView+Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoordinatesView+Coordinate.swift"; sourceTree = "<group>"; };
+		899FD36C240F31E400250968 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				899FD366240F06A600250968 /* CoordinatesView.swift */,
 				899FD36A240F292300250968 /* CoordinatesView+Coordinate.swift */,
 				899FD368240F28F900250968 /* UIView+Extension.swift */,
+				899FD36C240F31E400250968 /* Constants.swift */,
 				899FD34C240ECB6C00250968 /* AppDelegate.swift */,
 				899FD34E240ECB6C00250968 /* SceneDelegate.swift */,
 				899FD352240ECB6C00250968 /* Main.storyboard */,
@@ -161,6 +164,7 @@
 				899FD367240F06A600250968 /* CoordinatesView.swift in Sources */,
 				899FD369240F28F900250968 /* UIView+Extension.swift in Sources */,
 				899FD361240ED21500250968 /* ControlsView.swift in Sources */,
+				899FD36D240F31E400250968 /* Constants.swift in Sources */,
 				899FD351240ECB6C00250968 /* ViewController.swift in Sources */,
 				899FD34D240ECB6C00250968 /* AppDelegate.swift in Sources */,
 				899FD34F240ECB6C00250968 /* SceneDelegate.swift in Sources */,

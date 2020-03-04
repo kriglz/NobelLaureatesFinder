@@ -43,7 +43,7 @@ extension CoordinatesView {
             borderView.layer.borderColor = UIColor.gray.cgColor
             borderView.layer.borderWidth = 1
             
-            textField.placeholder = "Decimal degrees" // "Enter coordinate in decimal degrees (DD)"
+            textField.placeholder = "Decimal Degrees"
             textField.adjustsFontSizeToFitWidth = true
             textField.keyboardType = .numbersAndPunctuation
             textField.returnKeyType = .search
@@ -90,9 +90,27 @@ extension CoordinatesView {
         
         // MARK: - UITextFieldDelegate
         
-        func textFieldDidBeginEditing(_ textField: UITextField) {
-            // TODO show alert about tap to select and DD precision
+        func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+            let hasShownAlert = UserDefaults.standard.value(forKey: Constants.hasShownEditCoordinatesAlert) as? Bool ?? false
+            guard hasShownAlert == false else {
+                return true
+            }
             
+            UserDefaults.standard.set(true, forKey: Constants.hasShownEditCoordinatesAlert)
+            
+            let alert = UIAlertController(title: "Coordinate selection", message: "Please enter coordinates in decimal degrees (DD); you may also select coordintates by tapping on map.", preferredStyle: .alert)
+            let enterCoordinateAction = UIAlertAction(title: "Enter Coodinate", style: .default) { _ in
+                textField.becomeFirstResponder()
+            }
+            let chooseOnMapAction = UIAlertAction(title: "Select on map", style: .default, handler: nil)
+            alert.addAction(enterCoordinateAction)
+            alert.addAction(chooseOnMapAction)
+            viewController()?.present(alert, animated: true, completion: nil)
+            
+            return false
+        }
+        
+        func textFieldDidBeginEditing(_ textField: UITextField) {
             onBecameFirstResponder?()
         }
         
