@@ -18,13 +18,7 @@ class CoordinatesView: UIView {
         return nCoordinateField.isEditing || eCoordinateField.isEditing
     }
 
-    private let nCoordinateField = CoordinateView(title: "N")
-    private let eCoordinateField = CoordinateView(title: "E")
-    
-    private let nRange = -90.0...90.0
-    private let eRange = -180.0...180.0
-
-    private var coordinates: CLLocationCoordinate2D? {
+    var coordinates: CLLocationCoordinate2D? {
         guard let n = nCoordinateField.coordinate,
             let e = eCoordinateField.coordinate,
             nRange.contains(n),
@@ -38,6 +32,12 @@ class CoordinatesView: UIView {
         return CLLocationCoordinate2D(latitude: n, longitude: e)
     }
     
+    private let nCoordinateField = CoordinateView(title: "N")
+    private let eCoordinateField = CoordinateView(title: "E")
+    
+    private let nRange = -90.0...90.0
+    private let eRange = -180.0...180.0
+
     override init(frame: CGRect) {
         super.init(frame: frame)
        
