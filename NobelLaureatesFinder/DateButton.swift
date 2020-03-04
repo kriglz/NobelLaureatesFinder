@@ -21,6 +21,7 @@ class DateButton: UIControl {
         layer.borderWidth = 1
         
         titleLabel.text = "Select a year"
+        titleLabel.textAlignment = .center
 //        titleLabel.textColor = .lightGray
         
         addSubview(titleLabel)
