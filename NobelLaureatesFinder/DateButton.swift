@@ -26,7 +26,7 @@ class DateButton: UIControl {
         
         layer.cornerRadius = 10
         layer.borderColor = UIColor.systemGray.cgColor
-        layer.borderWidth = 1
+        layer.borderWidth = 0.5
         
         titleLabel.text = DateButton.placeholderMessage
         titleLabel.textColor = .placeholderText

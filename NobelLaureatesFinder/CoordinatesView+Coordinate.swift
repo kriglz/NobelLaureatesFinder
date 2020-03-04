@@ -41,7 +41,7 @@ extension CoordinatesView {
                         
             borderView.layer.cornerRadius = 10
             borderView.layer.borderColor = UIColor.systemGray.cgColor
-            borderView.layer.borderWidth = 1
+            borderView.layer.borderWidth = 0.5
             
             textField.placeholder = "Decimal Degrees"
             textField.adjustsFontSizeToFitWidth = true
