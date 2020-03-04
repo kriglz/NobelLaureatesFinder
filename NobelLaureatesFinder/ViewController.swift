@@ -22,6 +22,8 @@ class ViewController: UIViewController {
     private let searchButton = UIButton()
     private let listViewButton = UIButton()
 
+    private let routePlanner = RoutePlanner()
+    
     private var dataPickerHeightConstraint: NSLayoutConstraint?
 
     private lazy var targetAnnotation: MKPointAnnotation = {

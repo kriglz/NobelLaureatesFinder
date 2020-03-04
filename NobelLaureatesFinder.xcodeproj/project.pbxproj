@@ -10,6 +10,9 @@
 		896733A6241063EA00B7ED21 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896733A5241063EA00B7ED21 /* ListViewController.swift */; };
 		896733A8241069EF00B7ED21 /* ListViewController+Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896733A7241069EF00B7ED21 /* ListViewController+Cell.swift */; };
 		896733AA24106A7F00B7ED21 /* nobel-prize-laureates.json in Resources */ = {isa = PBXBuildFile; fileRef = 896733A924106A7E00B7ED21 /* nobel-prize-laureates.json */; };
+		896733AC24106AD900B7ED21 /* RoutePlanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896733AB24106AD900B7ED21 /* RoutePlanner.swift */; };
+		896733AE24106C7400B7ED21 /* NobelPrizeLaureate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896733AD24106C7400B7ED21 /* NobelPrizeLaureate.swift */; };
+		896733B02410745E00B7ED21 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896733AF2410745E00B7ED21 /* Destination.swift */; };
 		899FD34D240ECB6C00250968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD34C240ECB6C00250968 /* AppDelegate.swift */; };
 		899FD34F240ECB6C00250968 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD34E240ECB6C00250968 /* SceneDelegate.swift */; };
 		899FD351240ECB6C00250968 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD350240ECB6C00250968 /* ViewController.swift */; };
@@ -28,6 +31,9 @@
 		896733A5241063EA00B7ED21 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		896733A7241069EF00B7ED21 /* ListViewController+Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewController+Cell.swift"; sourceTree = "<group>"; };
 		896733A924106A7E00B7ED21 /* nobel-prize-laureates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "nobel-prize-laureates.json"; sourceTree = "<group>"; };
+		896733AB24106AD900B7ED21 /* RoutePlanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePlanner.swift; sourceTree = "<group>"; };
+		896733AD24106C7400B7ED21 /* NobelPrizeLaureate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NobelPrizeLaureate.swift; sourceTree = "<group>"; };
+		896733AF2410745E00B7ED21 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		899FD349240ECB6C00250968 /* NobelLaureatesFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NobelLaureatesFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		899FD34C240ECB6C00250968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		899FD34E240ECB6C00250968 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,7 +87,10 @@
 				899FD364240ED88800250968 /* DatePickerView.swift */,
 				899FD366240F06A600250968 /* CoordinatesView.swift */,
 				899FD36A240F292300250968 /* CoordinatesView+Coordinate.swift */,
+				896733AB24106AD900B7ED21 /* RoutePlanner.swift */,
+				896733AF2410745E00B7ED21 /* Destination.swift */,
 				896733A924106A7E00B7ED21 /* nobel-prize-laureates.json */,
+				896733AD24106C7400B7ED21 /* NobelPrizeLaureate.swift */,
 				899FD36C240F31E400250968 /* Constants.swift */,
 				899FD368240F28F900250968 /* UIView+Extension.swift */,
 				899FD34C240ECB6C00250968 /* AppDelegate.swift */,
@@ -172,9 +181,12 @@
 				899FD369240F28F900250968 /* UIView+Extension.swift in Sources */,
 				899FD36D240F31E400250968 /* Constants.swift in Sources */,
 				896733A8241069EF00B7ED21 /* ListViewController+Cell.swift in Sources */,
+				896733B02410745E00B7ED21 /* Destination.swift in Sources */,
 				899FD351240ECB6C00250968 /* ViewController.swift in Sources */,
 				899FD34D240ECB6C00250968 /* AppDelegate.swift in Sources */,
+				896733AC24106AD900B7ED21 /* RoutePlanner.swift in Sources */,
 				899FD34F240ECB6C00250968 /* SceneDelegate.swift in Sources */,
+				896733AE24106C7400B7ED21 /* NobelPrizeLaureate.swift in Sources */,
 				896733A6241063EA00B7ED21 /* ListViewController.swift in Sources */,
 				899FD363240ED69B00250968 /* DateButton.swift in Sources */,
 			);
