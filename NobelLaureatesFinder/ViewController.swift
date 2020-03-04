@@ -161,7 +161,8 @@ class ViewController: UIViewController {
     }
     
     @objc private func openListView(_ sender: UIButton) {
-        
+        let listViewController = ListViewController()
+        present(listViewController, animated: true, completion: nil)
     }
     
     @objc private func showDatePicker(_ sender: UIControl) {

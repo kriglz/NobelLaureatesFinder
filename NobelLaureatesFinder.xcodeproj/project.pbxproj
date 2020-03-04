@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		896733A6241063EA00B7ED21 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896733A5241063EA00B7ED21 /* ListViewController.swift */; };
+		896733A8241069EF00B7ED21 /* ListViewController+Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896733A7241069EF00B7ED21 /* ListViewController+Cell.swift */; };
 		899FD34D240ECB6C00250968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD34C240ECB6C00250968 /* AppDelegate.swift */; };
 		899FD34F240ECB6C00250968 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD34E240ECB6C00250968 /* SceneDelegate.swift */; };
 		899FD351240ECB6C00250968 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD350240ECB6C00250968 /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		896733A5241063EA00B7ED21 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		896733A7241069EF00B7ED21 /* ListViewController+Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewController+Cell.swift"; sourceTree = "<group>"; };
 		899FD349240ECB6C00250968 /* NobelLaureatesFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NobelLaureatesFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		899FD34C240ECB6C00250968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		899FD34E240ECB6C00250968 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 			isa = PBXGroup;
 			children = (
 				899FD350240ECB6C00250968 /* ViewController.swift */,
+				896733A5241063EA00B7ED21 /* ListViewController.swift */,
+				896733A7241069EF00B7ED21 /* ListViewController+Cell.swift */,
 				899FD362240ED69B00250968 /* DateButton.swift */,
 				899FD364240ED88800250968 /* DatePickerView.swift */,
 				899FD366240F06A600250968 /* CoordinatesView.swift */,
@@ -161,9 +167,11 @@
 				899FD367240F06A600250968 /* CoordinatesView.swift in Sources */,
 				899FD369240F28F900250968 /* UIView+Extension.swift in Sources */,
 				899FD36D240F31E400250968 /* Constants.swift in Sources */,
+				896733A8241069EF00B7ED21 /* ListViewController+Cell.swift in Sources */,
 				899FD351240ECB6C00250968 /* ViewController.swift in Sources */,
 				899FD34D240ECB6C00250968 /* AppDelegate.swift in Sources */,
 				899FD34F240ECB6C00250968 /* SceneDelegate.swift in Sources */,
+				896733A6241063EA00B7ED21 /* ListViewController.swift in Sources */,
 				899FD363240ED69B00250968 /* DateButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
