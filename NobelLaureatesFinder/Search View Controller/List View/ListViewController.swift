@@ -27,19 +27,34 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return tableView
     }()
     
+    private let titleLabel = UILabel()
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        
+        titleLabel.text = "20 Nobel laureates\nclosest to your chosen year and location\nin ascending order"
+        titleLabel.textAlignment = .center
+        titleLabel.font = .systemFont(ofSize: 17, weight: .bold)
+        titleLabel.numberOfLines = 0
         
         view.backgroundColor = .systemBackground
         
         view.addSubview(tableView)
+        view.addSubview(titleLabel)
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
+        tableView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        
+        titleLabel.setContentCompressionResistancePriority(.required, for: .vertical)
+        
+        titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
+        titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
     }
     
     required init?(coder: NSCoder) {
@@ -56,7 +71,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.identifier, for: indexPath)
   
         cell.textLabel?.text = items[indexPath.item].nobelPrizeLaureate.name
-        cell.detailTextLabel?.text = String(format: "%.0f", items[indexPath.item].cost) + " " + String(format: "%.0f", items[indexPath.item].nobelPrizeLaureate.year)
+        cell.detailTextLabel?.text = String(format: "%.0f", items[indexPath.item].nobelPrizeLaureate.year)
 
         return cell
     }
