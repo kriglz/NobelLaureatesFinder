@@ -37,7 +37,7 @@ class RoutePlanner {
     }
     
     func searchForBestRoute(year: Double, location: CLLocationCoordinate2D) -> [Destination] {
-        // Update the route costs - O(N)
+        // Update the route costs - O(D), where D is destination list count
         for index in 0..<destinationList.count {
             let nobel = destinationList[index].nobelPrizeLaureate
             
@@ -51,10 +51,11 @@ class RoutePlanner {
             destinationList[index].cost = cost
         }
         
-        // Sort the results - O(NlogN)
+        // Sort the results - O(DlogD)
         let sortedDestinations = destinationList.sorted(by: { $0.cost < $1.cost })
         
-        // Sort the results and return - O(N)
-        return Array.init(sortedDestinations.prefix(20))
+        // Get first B best lowest cost destination items, where B is 20 - O(B),
+        // and return
+        return Array(sortedDestinations.prefix(20))
     }
 }

@@ -167,6 +167,10 @@ class SearchViewController: UIViewController {
     }
     
     @objc private func openListView(_ sender: UIButton) {
+        if currentRoute.isEmpty {
+            return UINotificationFeedbackGenerator().notificationOccurred(.warning)
+        }
+        
         let listViewController = ListViewController()
         listViewController.items = currentRoute
         present(listViewController, animated: true, completion: nil)

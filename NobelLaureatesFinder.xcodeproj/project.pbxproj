@@ -13,6 +13,7 @@
 		896733AC24106AD900B7ED21 /* RoutePlanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896733AB24106AD900B7ED21 /* RoutePlanner.swift */; };
 		896733AE24106C7400B7ED21 /* NobelPrizeLaureate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896733AD24106C7400B7ED21 /* NobelPrizeLaureate.swift */; };
 		896733B02410745E00B7ED21 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896733AF2410745E00B7ED21 /* Destination.swift */; };
+		896733B724108B2C00B7ED21 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896733B624108B2C00B7ED21 /* MapView.swift */; };
 		899FD34D240ECB6C00250968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD34C240ECB6C00250968 /* AppDelegate.swift */; };
 		899FD34F240ECB6C00250968 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD34E240ECB6C00250968 /* SceneDelegate.swift */; };
 		899FD351240ECB6C00250968 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD350240ECB6C00250968 /* SearchViewController.swift */; };
@@ -34,6 +35,7 @@
 		896733AB24106AD900B7ED21 /* RoutePlanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePlanner.swift; sourceTree = "<group>"; };
 		896733AD24106C7400B7ED21 /* NobelPrizeLaureate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NobelPrizeLaureate.swift; sourceTree = "<group>"; };
 		896733AF2410745E00B7ED21 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		896733B624108B2C00B7ED21 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		899FD349240ECB6C00250968 /* NobelLaureatesFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NobelLaureatesFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		899FD34C240ECB6C00250968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		899FD34E240ECB6C00250968 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,12 +67,9 @@
 			isa = PBXGroup;
 			children = (
 				899FD350240ECB6C00250968 /* SearchViewController.swift */,
-				896733A5241063EA00B7ED21 /* ListViewController.swift */,
-				896733A7241069EF00B7ED21 /* ListViewController+Cell.swift */,
-				899FD362240ED69B00250968 /* DateButton.swift */,
-				899FD364240ED88800250968 /* DatePickerView.swift */,
-				899FD366240F06A600250968 /* CoordinatesView.swift */,
-				899FD36A240F292300250968 /* CoordinatesView+Coordinate.swift */,
+				896733B824108B3000B7ED21 /* Map View */,
+				896733B524108B1800B7ED21 /* List View */,
+				896733B424108B0E00B7ED21 /* Contol Views */,
 			);
 			path = "Search View Controller";
 			sourceTree = "<group>";
@@ -93,6 +92,34 @@
 				899FD368240F28F900250968 /* UIView+Extension.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		896733B424108B0E00B7ED21 /* Contol Views */ = {
+			isa = PBXGroup;
+			children = (
+				899FD362240ED69B00250968 /* DateButton.swift */,
+				899FD364240ED88800250968 /* DatePickerView.swift */,
+				899FD366240F06A600250968 /* CoordinatesView.swift */,
+				899FD36A240F292300250968 /* CoordinatesView+Coordinate.swift */,
+			);
+			path = "Contol Views";
+			sourceTree = "<group>";
+		};
+		896733B524108B1800B7ED21 /* List View */ = {
+			isa = PBXGroup;
+			children = (
+				896733A5241063EA00B7ED21 /* ListViewController.swift */,
+				896733A7241069EF00B7ED21 /* ListViewController+Cell.swift */,
+			);
+			path = "List View";
+			sourceTree = "<group>";
+		};
+		896733B824108B3000B7ED21 /* Map View */ = {
+			isa = PBXGroup;
+			children = (
+				896733B624108B2C00B7ED21 /* MapView.swift */,
+			);
+			path = "Map View";
 			sourceTree = "<group>";
 		};
 		899FD340240ECB6C00250968 = {
@@ -206,6 +233,7 @@
 				899FD36D240F31E400250968 /* Constants.swift in Sources */,
 				896733A8241069EF00B7ED21 /* ListViewController+Cell.swift in Sources */,
 				896733B02410745E00B7ED21 /* Destination.swift in Sources */,
+				896733B724108B2C00B7ED21 /* MapView.swift in Sources */,
 				899FD351240ECB6C00250968 /* SearchViewController.swift in Sources */,
 				899FD34D240ECB6C00250968 /* AppDelegate.swift in Sources */,
 				896733AC24106AD900B7ED21 /* RoutePlanner.swift in Sources */,

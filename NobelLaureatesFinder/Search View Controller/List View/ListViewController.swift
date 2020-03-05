@@ -56,7 +56,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.identifier, for: indexPath)
   
         cell.textLabel?.text = items[indexPath.item].nobelPrizeLaureate.name
-        cell.detailTextLabel?.text = String(format: "%.0f", items[indexPath.item].nobelPrizeLaureate.year)
+        cell.detailTextLabel?.text = String(format: "%.0f", items[indexPath.item].cost) + " " + String(format: "%.0f", items[indexPath.item].nobelPrizeLaureate.year)
 
         return cell
     }
