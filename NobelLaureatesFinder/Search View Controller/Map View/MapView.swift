@@ -61,7 +61,7 @@ class MapView: UIView, MKMapViewDelegate {
             let annotation = MKPointAnnotation()
             annotation.shouldGroupAccessibilityChildren = false
             let nobel = destination.nobelPrizeLaureate
-            annotation.title = String(format: "%.0f", nobel.year) + "\n" + "\(nobel.name)"
+            annotation.title = String(format: "%.0f", nobel.year) + " · " + "\(nobel.name)"
             annotation.coordinate = nobel.location.coordinate
             
             routeAnnotations.append(annotation)
@@ -75,14 +75,13 @@ class MapView: UIView, MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: nil)
 
-        pinView.canShowCallout = true
         pinView.animatesDrop = true
+        pinView.accessibilityLabel = annotation.title ?? ""
 
         let isTargetAnnotation = annotation.coordinate.latitude == targetAnnotation.coordinate.latitude
             && annotation.coordinate.longitude == targetAnnotation.coordinate.longitude
-        pinView.pinTintColor = isTargetAnnotation ? .systemBlue : .systemOrange
+        pinView.pinTintColor = isTargetAnnotation ? .systemOrange : .systemBlue
 
         return pinView
     }
 }
- 
