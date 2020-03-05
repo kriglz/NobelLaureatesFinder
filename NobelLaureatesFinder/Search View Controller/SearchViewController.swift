@@ -13,7 +13,11 @@ import CoreLocation
 class SearchViewController: UIViewController {
 
     private let routePlanner = RoutePlanner()
-    private var currentRoute: [Destination] = []
+    private var currentRoute: [Destination] = [] {
+        didSet {
+            mapView.updateRouteAnnotations(currentRoute)
+        }
+    }
 
     private let headerView = UIView()
     private let dateTitle = UILabel()
@@ -21,18 +25,11 @@ class SearchViewController: UIViewController {
     private let datePickerView = DatePickerView()
     private let coordinateTitle = UILabel()
     private let coordinatesView = CoordinatesView()
-    private let mapView = MKMapView()
+    private let mapView = MapView()
     private let searchButton = UIButton()
     private let listViewButton = UIButton()
     
     private var dataPickerHeightConstraint: NSLayoutConstraint?
-
-    private lazy var targetAnnotation: MKPointAnnotation = {
-        let annotation = MKPointAnnotation()
-        annotation.title = "Your location"
-        mapView.addAnnotation(annotation)
-        return annotation
-    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,11 +55,11 @@ class SearchViewController: UIViewController {
         }
 
         coordinatesView.onSearch = { [weak self] coordinates in
-            self?.targetAnnotation.coordinate = coordinates
+            self?.mapView.updateTargetAnnotationCoordinates(coordinates)
 
             let span = MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10)
             let region = MKCoordinateRegion(center: coordinates, span: span)
-            self?.mapView.setRegion(region, animated: true)
+            self?.mapView.updateRegion(region)
             
             self?.searchAction(nil)
         }
@@ -155,15 +152,22 @@ class SearchViewController: UIViewController {
     // MARK: - Actions
 
     @objc private func searchAction(_ sender: Any?) {
+        if datePickerView.isPresented || coordinatesView.isEditing {
+            dismissDatePicker()
+            coordinatesView.endEditing()
+            return
+        }
+        
         guard let dateObject = dateButton.date,
             let date = Double(dateObject),
             let coordinates = coordinatesView.coordinates else {
-                return UINotificationFeedbackGenerator().notificationOccurred(.warning)
+                if sender is UIButton {
+                    UINotificationFeedbackGenerator().notificationOccurred(.warning)
+                }
+                return
         }
         
         currentRoute = routePlanner.searchForBestRoute(year: date, location: coordinates)
-        
-        // add pins to the map
     }
     
     @objc private func openListView(_ sender: UIButton) {
@@ -211,9 +215,11 @@ class SearchViewController: UIViewController {
         }
        
         let location = sender.location(in: mapView)
-        let coordinates = mapView.convert(location, toCoordinateFrom: mapView)
+        let coordinates = mapView.coordinatesForLocation(location)
         
         coordinatesView.updateCoordinates(coordinates)
-        targetAnnotation.coordinate = coordinates
+        mapView.updateTargetAnnotationCoordinates(coordinates)
+        
+        searchAction(sender)
     }
 }
