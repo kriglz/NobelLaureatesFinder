@@ -75,7 +75,6 @@ class MapView: UIView, MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: nil)
 
-        pinView.accessibilityLabel = annotation.title ?? ""
         pinView.canShowCallout = true
         pinView.animatesDrop = true
 
