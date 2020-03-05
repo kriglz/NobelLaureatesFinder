@@ -12,6 +12,9 @@ import CoreLocation
 
 class SearchViewController: UIViewController {
 
+    private let routePlanner = RoutePlanner()
+    private var currentRoute: [Destination] = []
+
     private let headerView = UIView()
     private let dateTitle = UILabel()
     private let dateButton = DateButton()
@@ -21,8 +24,6 @@ class SearchViewController: UIViewController {
     private let mapView = MKMapView()
     private let searchButton = UIButton()
     private let listViewButton = UIButton()
-
-    private let routePlanner = RoutePlanner()
     
     private var dataPickerHeightConstraint: NSLayoutConstraint?
 
@@ -154,16 +155,20 @@ class SearchViewController: UIViewController {
     // MARK: - Actions
 
     @objc private func searchAction(_ sender: Any?) {
-        guard let date = dateButton.date,
+        guard let dateObject = dateButton.date,
+            let date = Double(dateObject),
             let coordinates = coordinatesView.coordinates else {
                 return UINotificationFeedbackGenerator().notificationOccurred(.warning)
         }
         
-        // Perform search
+        currentRoute = routePlanner.searchForBestRoute(year: date, location: coordinates)
+        
+        // add pins to the map
     }
     
     @objc private func openListView(_ sender: UIButton) {
         let listViewController = ListViewController()
+        listViewController.items = currentRoute
         present(listViewController, animated: true, completion: nil)
     }
     

@@ -36,7 +36,7 @@ struct RoutePlanner {
         }
     }
     
-    func bestRoute(forYear year: Double, location: CLLocationCoordinate2D) -> [Destination] {
+    func searchForBestRoute(year: Double, location: CLLocationCoordinate2D) -> [Destination] {
         return []
     }
 }
