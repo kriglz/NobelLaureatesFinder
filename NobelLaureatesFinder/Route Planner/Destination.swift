@@ -10,6 +10,6 @@ import Foundation
 
 struct Destination {
     
-    let cost: Double
+    var cost: Double
     let nobelPrizeLaureate: NobelPrizeLaureate
 }
