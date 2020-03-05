@@ -8,7 +8,7 @@
 
 import CoreLocation
 
-struct RoutePlanner {
+class RoutePlanner {
     
     private var destinationList: [Destination] = []
     
@@ -29,7 +29,7 @@ struct RoutePlanner {
             
             let nobelLaureate = NobelPrizeLaureate(name: "\(firstname) \(surname)",
                 year: year,
-                location: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
+                location: CLLocation(latitude: latitude, longitude: longitude))
             
             let destination = Destination(cost: 0, nobelPrizeLaureate: nobelLaureate)
             destinationList.append(destination)
@@ -37,6 +37,24 @@ struct RoutePlanner {
     }
     
     func searchForBestRoute(year: Double, location: CLLocationCoordinate2D) -> [Destination] {
-        return []
+        // Update the route costs - O(N)
+        for index in 0..<destinationList.count {
+            let nobel = destinationList[index].nobelPrizeLaureate
+            
+            let yearDelta = abs(nobel.year - year)
+            
+            let location = CLLocation(latitude: location.latitude, longitude: location.longitude)
+            let distance = location.distance(from: nobel.location)
+            
+            let cost = yearDelta + distance
+            
+            destinationList[index].cost = cost
+        }
+        
+        // Sort the results - O(NlogN)
+        let sortedDestinations = destinationList.sorted(by: { $0.cost < $1.cost })
+        
+        // Sort the results and return - O(N)
+        return Array.init(sortedDestinations.prefix(20))
     }
 }

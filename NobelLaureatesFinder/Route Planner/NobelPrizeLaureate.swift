@@ -12,5 +12,5 @@ struct NobelPrizeLaureate {
     
     let name: String
     let year: Double
-    let location: CLLocationCoordinate2D
+    let location: CLLocation
 }
