@@ -10,7 +10,7 @@ import UIKit
 
 class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var items: [String] = [] {
+    var items: [Destination] = [] {
         didSet {
             tableView.reloadData()
         }
@@ -23,7 +23,6 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.register(Cell.self, forCellReuseIdentifier: Cell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
         
         return tableView
     }()
@@ -31,12 +30,14 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
+        view.backgroundColor = .systemBackground
+        
         view.addSubview(tableView)
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
-        tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
     }
@@ -54,8 +55,8 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.identifier, for: indexPath)
   
-        cell.textLabel?.text = items[indexPath.item]
-        cell.detailTextLabel?.text = items[indexPath.item]
+        cell.textLabel?.text = items[indexPath.item].nobelPrizeLaureate.name
+        cell.detailTextLabel?.text = String(format: "%.0f", items[indexPath.item].nobelPrizeLaureate.year)
 
         return cell
     }
